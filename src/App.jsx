@@ -11,6 +11,7 @@ import Download from './components/Download'
 import Recruitment from './components/Recruitment'
 import Testimonials from './components/Testimonials'
 import FAQ from './components/FAQ'
+import Register from './components/Register'
 import Footer from './components/Footer'
 import NurseModal from './components/NurseModal'
 import Toast from './components/Toast'
@@ -26,10 +27,6 @@ export default function App() {
 
   return (
     <>
-      <div className="bg-glow bg-glow-1" />
-      <div className="bg-glow bg-glow-2" />
-      <div className="bg-glow bg-glow-3" />
-
       <Navbar />
 
       <main>
@@ -44,6 +41,7 @@ export default function App() {
         <Recruitment onOpenModal={() => setIsNurseModalOpen(true)} />
         <Testimonials />
         <FAQ />
+        <Register />
       </main>
 
       <Footer />
