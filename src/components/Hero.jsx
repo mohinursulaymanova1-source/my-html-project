@@ -1,12 +1,14 @@
 import { useState } from 'react'
 
+const base = import.meta.env.BASE_URL
+
 const SPECIALISTS_DATA = {
   nurse: {
     role: 'Oliy toifali bosh hamshira',
     name: 'Malika Tohirova',
     rating: '★ 4.98 (124)',
     exp: 'Tajriba: 8 yil',
-    photo: '/images/nurse_madina.jpg',
+    photo: `${base}images/nurse_madina.jpg`,
     location: '📍 Chilonzor 7-mavze (850 metr)',
     eta: 'ETA: 12-15 daq',
   },
@@ -15,7 +17,7 @@ const SPECIALISTS_DATA = {
     name: 'Dr. Jasur Umarov',
     rating: '★ 4.96 (210)',
     exp: 'Tajriba: 16 yil',
-    photo: '/images/doctor_jasur.jpg',
+    photo: `${base}images/doctor_jasur.jpg`,
     location: "📍 Mirzo Ulug'bek tumani (1.4 km)",
     eta: 'ETA: 18-20 daq',
   },
@@ -24,7 +26,7 @@ const SPECIALISTS_DATA = {
     name: 'Zarina Aliyeva',
     rating: '★ 4.95 (189)',
     exp: 'Tajriba: 11 yil',
-    photo: '/images/nurse_dilnoza.jpg',
+    photo: `${base}images/nurse_dilnoza.jpg`,
     location: '📍 Yunusobod tumani (1.1 km)',
     eta: 'ETA: 15 daq',
   },
@@ -106,9 +108,9 @@ export default function Hero({ showToast }) {
           <div className="hero-creative-wrapper">
             <div className="hub-floating-widget hfw-top-right">
               <div className="hfw-avatars-stack">
-                <img src="/images/nurse_madina.jpg" alt="Mutaxassis" />
-                <img src="/images/doctor_jasur.jpg" alt="Mutaxassis" />
-                <img src="/images/nurse_dilnoza.jpg" alt="Mutaxassis" />
+                <img src={`${import.meta.env.BASE_URL}images/nurse_madina.jpg`} alt="Mutaxassis" />
+                <img src={`${import.meta.env.BASE_URL}images/doctor_jasur.jpg`} alt="Mutaxassis" />
+                <img src={`${import.meta.env.BASE_URL}images/nurse_dilnoza.jpg`} alt="Mutaxassis" />
               </div>
               <div className="hfw-text">
                 <strong>450+ Mutaxassis</strong>

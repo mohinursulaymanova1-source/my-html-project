@@ -6,9 +6,11 @@ const CheckIcon = () => (
   </svg>
 )
 
+const base = import.meta.env.BASE_URL
+
 const SPECIALISTS = [
   {
-    photo: '/images/nurse_madina.jpg',
+    photo: `${base}images/nurse_madina.jpg`,
     name: 'Malika Tohirova',
     role: 'Oliy toifali bosh hamshira',
     exp: '8 yil',
@@ -16,7 +18,7 @@ const SPECIALISTS = [
     skills: ['Kapelnitsa', 'Vena ukoli', 'Kateter'],
   },
   {
-    photo: '/images/nurse_dilnoza.jpg',
+    photo: `${base}images/nurse_dilnoza.jpg`,
     name: 'Zarina Aliyeva',
     role: 'Reanimatsiya hamshirasi',
     exp: '11 yil',
@@ -24,7 +26,7 @@ const SPECIALISTS = [
     skills: ['Qiyin tomirlar', 'Kapelnitsa', "Zond qo'yish"],
   },
   {
-    photo: '/images/nurse_timur.jpg',
+    photo: `${base}images/nurse_timur.jpg`,
     name: 'Timur Ahmedov',
     role: 'Jarrohlik hamshirasi',
     exp: '9 yil',
@@ -32,7 +34,7 @@ const SPECIALISTS = [
     skills: ['Yara perevyazkasi', 'Chok parvarishi', 'Ukol'],
   },
   {
-    photo: '/images/doctor_jasur.jpg',
+    photo: `${base}images/doctor_jasur.jpg`,
     name: 'Dr. Jasur Umarov',
     role: 'Shifokor-terapevt',
     exp: '16 yil',
