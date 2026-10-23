@@ -15,10 +15,8 @@ import Register from './components/Register'
 import Footer from './components/Footer'
 import NurseModal from './components/NurseModal'
 import Toast from './components/Toast'
-import AuthPage, { getSession, clearSession } from './components/AuthPage'
 
 export default function App() {
-  const [user, setUser] = useState(getSession)
   const [isNurseModalOpen, setIsNurseModalOpen] = useState(false)
   const [toast, setToast] = useState({ visible: false, message: '' })
 
@@ -27,22 +25,9 @@ export default function App() {
     setTimeout(() => setToast({ visible: false, message: '' }), 2500)
   }, [])
 
-  const handleAuth = (u) => {
-    setUser(u)
-    window.scrollTo(0, 0)
-    showToast(`Xush kelibsiz, ${u.name.split(' ')[0]}!`)
-  }
-
-  const handleLogout = () => {
-    clearSession()
-    setUser(null)
-  }
-
-  if (!user) return <AuthPage onAuth={handleAuth} />
-
   return (
     <>
-      <Navbar user={user} onLogout={handleLogout} />
+      <Navbar />
 
       <main>
         <Hero showToast={showToast} />
